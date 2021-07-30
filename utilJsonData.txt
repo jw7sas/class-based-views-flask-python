@@ -1,0 +1,42 @@
+""" NOTA: ESTE ARCHIVO CONTIENE DATA DE PRUEBA, PARA GENERAR LAS VISTAS QUE SE DESCRIBEN EN EL VIDEO DEL CANAL ASPEROS_GEEK. """
+# app/views -> WelcomeView
+
+products = [
+    {"id": 1, "name": "Televisor", "description": None, "category_id": 1, "category_name": "Electrodomesticos"},
+    {"id": 2, "name": "Nevera", "description": None, "category_id": 1, "category_name": "Electrodomesticos"},
+    {"id": 3, "name": "Lavadora", "description": None, "category_id": 1, "category_name": "Electrodomesticos"},
+    {"id": 4, "name": "Escritorio de Madera", "description": None, "category_id": 2, "category_name": "Muebles"}
+]
+services = [
+    {"id": 1, "name": "Ventas Online"},
+    {"id": 2, "name": "Compras Online"}
+]
+
+# app/sales/views -> InvoiceView
+
+sales = [
+    {
+        "id": 1, "details": [
+                {"id": 1, "product": {"id": 1, "name": "Televisor", "description": None, "category_id": 1, "category_name": "Electrodomesticos", "price": 1500000}, "units": 2},
+                {"id": 2, "product": {"id": 4, "name": "Escritorio de Madera", "description": None, "category_id": 2, "category_name": "Muebles", "price": 745000}, "units": 1}
+            ],
+        "nFactura": 452635,
+        "total": 3745000
+    },
+    {
+        "id": 2, "details": [
+                {"id": 2, "product": {"id": 3, "name": "Lavadora", "description": None, "category_id": 1, "category_name": "Electrodomesticos", "price": 1213000}, "units": 1}
+            ],
+        "nFactura": 452636,
+        "total": 1213000
+    }
+]
+
+# app/auth/views -> LoginView
+
+data = {
+    "username": "as_geek",
+    "password": "123Admin"
+}
+
+ 

@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block title %}
+    {{ super() }}
+    Home
+{% endblock %}
+{% block content %}
+    <section class="hero">
+        <div class="hero-body">
+            <p class="title">
+                Bienvenidos al sistema ...
+            </p>
+            <p class="subtitle">
+                Asperos Geek, vistas basadas en clases
+            </p>
+            <div class="columns is-desktop is-multiline">
+            {% for p in products %}
+                <div class="column is-4">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="content">
+                                <p class="title is-4">{{ p.name }}</p>
+                                <p class="subtitle is-6">{{ p.category_name }}</p>
+                                <hr>
+                                <p>Descripción: {{ p.description }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endblock %}
